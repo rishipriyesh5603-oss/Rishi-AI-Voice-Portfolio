@@ -1,133 +1,137 @@
 # Rishi AI Portfolio
 
-A modern AI/ML portfolio with an integrated AI assistant.
+### AI-Powered Personal Portfolio with an Integrated LLM Assistant
 
-## Architecture
+A modern full-stack AI/ML portfolio that combines a responsive React interface with a FastAPI backend and an LLM-powered personal assistant.
 
-- Frontend: React + Vite
-- Backend: FastAPI
-- LLM: Groq Chat Completions API
-- Model: `llama-3.3-70b-versatile`
-- Deployment target: Vercel (frontend) + Render/Railway (backend)
+The assistant allows recruiters and visitors to interact with my portfolio using natural-language questions about my **skills, projects, experience, education, certifications, and technical background**.
 
-The chatbot is grounded with the portfolio information in `backend/app/data.py`.
-It is intentionally not a generic chatbot: it should answer questions about Rishi's skills, projects, experience, education, and contact information.
+---
 
-## 1. Run the backend
+## 🚀 Live Application
 
-```bash
-cd backend
-python -m venv .venv
+🌐 **Portfolio:**  
+https://rishi-ai-voice-portfolio.vercel.app
+
+⚡ **Backend API:**  
+https://rishi-ai-voice-portfolio.onrender.com
+
+📚 **API Documentation:**  
+https://rishi-ai-voice-portfolio.onrender.com/docs
+
+---
+
+## ✨ Features
+
+- 🤖 **AI Portfolio Assistant** — Ask questions about my professional profile using natural language.
+- 💼 **Project Showcase** — Explore my AI/ML, Generative AI, data analytics, and software projects.
+- 🧠 **LLM Integration** — Uses Groq-powered LLM inference for conversational responses.
+- ⚡ **FastAPI Backend** — Lightweight REST API handling AI requests.
+- ⚛️ **React + Vite Frontend** — Fast and responsive modern UI.
+- 📄 **Resume Access** — Directly view my professional resume.
+- 🔗 **GitHub & LinkedIn Integration** — Easy access to professional profiles and project repositories.
+- 📱 **Responsive Design** — Optimized for desktop, tablet, and mobile devices.
+- ☁️ **Cloud Deployment** — Frontend and backend independently deployed to production.
+
+---
+
+## 🧠 AI Assistant
+
+The portfolio includes a dedicated AI assistant called **Rishi AI**.
+
+Visitors can ask questions such as:
+
+> "Who is Rishi?"
+
+> "What are Rishi's strongest projects?"
+
+> "What technologies does Rishi work with?"
+
+> "Tell me about the AI Knowledge Assistant."
+
+> "What experience does Rishi have with Generative AI?"
+
+The assistant generates responses using portfolio-specific context rather than requiring visitors to manually search through the entire website.
+
+---
+
+## 🏗️ Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │       Visitor       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   React + Vite      │
+                    │      Frontend       │
+                    │       Vercel        │
+                    └──────────┬──────────┘
+                               │
+                         REST API
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │       FastAPI       │
+                    │       Backend       │
+                    │       Render        │
+                    └──────────┬──────────┘
+                               │
+                         LLM Request
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │      Groq API       │
+                    │   LLM Inference     │
+                    └──────────┬──────────┘
+                               │
+                         AI Response
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    Rishi AI Chat    │
+                    └─────────────────────┘
 ```
 
-Windows:
-```bash
-.venv\Scripts\activate
-```
+---
 
-macOS/Linux:
-```bash
-source .venv/bin/activate
-```
-
-Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-Copy `.env.example` to `.env` and add your Groq API key:
-```env
-GROQ_API_KEY=your_key_here
-FRONTEND_ORIGIN=http://localhost:5173
-```
-
-Start:
-```bash
-uvicorn app.main:app --reload --port 8000
-```
-
-Backend:
-http://localhost:8000
-
-Swagger:
-http://localhost:8000/docs
-
-## 2. Run the frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Frontend:
-http://localhost:5173
-
-Create `frontend/.env` if needed:
-```env
-VITE_API_URL=http://localhost:8000
-```
-
-## 3. Production deployment
-
-### Backend
-
-Deploy `backend` to Render/Railway/Fly.io or another Python host.
-
-Build/install:
-```bash
-pip install -r requirements.txt
-```
-
-Start command:
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port $PORT
-```
-
-Set:
-- `GROQ_API_KEY`
-- `FRONTEND_ORIGIN=https://your-vercel-domain.vercel.app`
+## 🛠️ Tech Stack
 
 ### Frontend
 
-Deploy `frontend` to Vercel.
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
 
-Build command:
-```bash
-npm run build
-```
+### Backend
 
-Output directory:
-```text
-dist
-```
+- Python
+- FastAPI
+- Uvicorn
+- Pydantic
+- REST API
+- CORS
 
-Set:
-```env
-VITE_API_URL=https://your-backend-domain.example.com
-```
+### AI / Generative AI
 
-## 4. Customize before publishing
+- Groq API
+- Large Language Models (LLMs)
+- Prompt Engineering
+- Context-based AI responses
 
-Edit:
-- `backend/app/data.py` — your real resume/project facts
-- `frontend/src/data.js` — portfolio display data
-- `frontend/src/App.jsx` — name, headline and sections
-- `frontend/src/index.css` — visual style
-- `frontend/public/resume.pdf` — put your real resume here
+### Deployment
 
-Do not put `GROQ_API_KEY` in frontend code. The key belongs only in the backend environment.
+- Vercel — Frontend
+- Render — Backend
 
-## AI portfolio project for your resume
+### Development
 
-Suggested title:
+- Git
+- GitHub
+- VS Code
+- npm
+- Python Virtual Environment
 
-**AI-Powered Portfolio Assistant**
-
-Suggested description:
-
-Built and deployed an AI-powered personal portfolio using React, FastAPI and Groq LLMs. Implemented a grounded conversational assistant that answers recruiter questions using structured portfolio context, with a responsive UI, API integration, CORS configuration and production deployment.
-
-## Important
-
-This project uses the LLM for natural-language responses, but the portfolio facts are supplied by your backend. Update `data.py` with only information that is actually true about you.
