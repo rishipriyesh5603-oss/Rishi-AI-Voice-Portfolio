@@ -35,6 +35,32 @@ PORTFOLIO = {
             ],
         },
         {
+            "name": "Plant Disease Detection",
+            "type": "Deep Learning / Computer Vision",
+            "description": (
+                "A CNN-based deep learning project that detects and classifies "
+                "plant diseases from leaf images. The model uses image preprocessing, "
+                "data augmentation, CNN training, validation, and performance evaluation "
+                "to identify different plant disease categories."
+            ),
+            "stack": [
+                "Python",
+                "TensorFlow",
+                "Keras",
+                "CNN",
+                "NumPy",
+                "Matplotlib",
+                "Jupyter Notebook"
+            ],
+            "highlights": [
+                "CNN-based image classification",
+                "Plant leaf image preprocessing and augmentation",
+                "Model training and validation",
+                "Disease classification using deep learning",
+                "Performance evaluation"
+            ]
+        },
+        {
             "name": "AI-Powered Portfolio Assistant",
             "type": "Generative AI / Full Stack",
             "description": (
