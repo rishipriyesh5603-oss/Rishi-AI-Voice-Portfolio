@@ -401,7 +401,7 @@ function Projects() {
         "Render",
         "Docker",
       ],
-      github: "#",
+      github: "https://github.com/rishipriyesh5603-oss/AI_Knowledge_Assistant",
       demo: "https://ai-knowledge-assistant-5603.streamlit.app/",
     },
     {
@@ -419,7 +419,7 @@ function Projects() {
         "Llama",
         "Vercel",
       ],
-      github: "https://github.com/rishipriyesh5603-oss/AI_Knowledge_Assistant",
+      github: "https://github.com/rishipriyesh5603-oss/Rishi-AI-Voice-Portfolio",
       demo: "https://ai-knowledge-assistant-5603.streamlit.app/",
     },
         {
@@ -451,8 +451,8 @@ function Projects() {
         "Scikit-learn",
         "Streamlit",
       ],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/rishipriyesh5603-oss/Wine-Quality",
+      demo: "https://wine-quality.streamlit.app/",
     },
     {
       number: "05",
