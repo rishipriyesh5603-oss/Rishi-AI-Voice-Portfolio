@@ -419,8 +419,8 @@ function Projects() {
         "Llama",
         "Vercel",
       ],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/rishipriyesh5603-oss/AI_Knowledge_Assistant",
+      demo: "https://ai-knowledge-assistant-5603.streamlit.app/",
     },
         {
       number: "03",
