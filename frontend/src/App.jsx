@@ -420,7 +420,7 @@ function Projects() {
         "Vercel",
       ],
       github: "https://github.com/rishipriyesh5603-oss/Rishi-AI-Voice-Portfolio",
-      demo: "https://ai-knowledge-assistant-5603.streamlit.app/",
+      demo: "#",
     },
         {
       number: "03",
