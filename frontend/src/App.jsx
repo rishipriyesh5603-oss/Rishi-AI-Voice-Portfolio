@@ -1,3 +1,4 @@
+import PrivacyPolicy from "./PrivacyPolicy";
 import React, { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
@@ -20,6 +21,9 @@ import { experience, profile, projects, skills, certificates} from "./data";
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 function App() {
+    if (window.location.pathname === "/privacy-policy") {
+    return <PrivacyPolicy />;
+  }
   const [mobileOpen, setMobileOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
 
